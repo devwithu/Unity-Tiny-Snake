@@ -117,7 +117,11 @@
             }
         }, {
             "$type": "SnakeHead, Snake",
-            "Direction": {}
+            "Direction": {},
+            "LastPosition": {}
+        }, {
+            "$type": "SnakeSegment, Snake",
+            "Elements": []
         }, {
             "$type": "Unity.Tiny.Core.EntityName, Unity.Tiny.Core",
             "Elements": [{
@@ -161,6 +165,10 @@
                 "StableTypeHash": 18398407108115202223
             }, {
                 "StableTypeHash": 12340090343759382123
+            }, {
+                "StableTypeHash": 8745718629836371113
+            }, {
+                "StableTypeHash": 9636377659650004142
             }]
         }]
     }]

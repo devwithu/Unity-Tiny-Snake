@@ -17,12 +17,19 @@
             "renderMode": 0
         }, {
             "$type": "GameConfig, Snake",
-            "TickRate": 0.5
+            "TickRate": 0.1,
+            "SnakeTailSceneReference": {
+                "SceneGuid": "f04f31b22aa94985b009af2a46c038e7"
+            }
         }, {
             "$type": "Unity.Tiny.Scenes.Scenes, Unity.Tiny.Scenes",
             "Elements": [{
                 "SceneReference": {
                     "SceneGuid": "614f3199702349f3bf67203af5c12e00"
+                }
+            }, {
+                "SceneReference": {
+                    "SceneGuid": "f04f31b22aa94985b009af2a46c038e7"
                 }
             }]
         }, {
@@ -42,6 +49,8 @@
                 "StableTypeHash": 1909538074448008921
             }, {
                 "StableTypeHash": 7812733310980956456
+            }, {
+                "StableTypeHash": 679702626034275755
             }]
         }, {
             "$type": "Unity.Authoring.Core.ConfigurationTag, Unity.Authoring.Core"
