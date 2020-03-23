@@ -16,7 +16,7 @@
             "orientation": 0,
             "renderMode": 0
         }, {
-            "$type": "s.GameConfig, Snake",
+            "$type": "GameConfig, Snake",
             "TickRate": 0.5
         }, {
             "$type": "Unity.Tiny.Scenes.Scenes, Unity.Tiny.Scenes",
@@ -40,6 +40,8 @@
                 "StableTypeHash": 12662904853204722592
             }, {
                 "StableTypeHash": 1909538074448008921
+            }, {
+                "StableTypeHash": 7812733310980956456
             }]
         }, {
             "$type": "Unity.Authoring.Core.ConfigurationTag, Unity.Authoring.Core"

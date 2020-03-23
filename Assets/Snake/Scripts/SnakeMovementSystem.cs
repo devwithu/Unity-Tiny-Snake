@@ -8,8 +8,11 @@ using Unity.Tiny.Input;
 
 public class SnakeMovementSystem : ComponentSystem
 {
+    private const float OrthographicSize = 10;
+
     protected override void OnUpdate()
     {
+
         Entities.ForEach((Entity Entity, ref SnakeHead snake, ref Translation translation) =>
         {
             var position = translation.Value;
@@ -38,7 +41,23 @@ public class SnakeMovementSystem : ComponentSystem
 
             gameConfig.LastFrameTime = (float)tinyEnv.frameTime;
             tinyEnv.SetConfigData(gameConfig);
+
+            var displayInfo = tinyEnv.GetConfigData<DisplayInfo>();
+            var aspectRatio = (float) displayInfo.width / displayInfo.height;
+            var xScreenSize = aspectRatio * OrthographicSize;
+            
             position += snake.Direction ;
+
+            if (position.x > xScreenSize)
+                position.x = -xScreenSize;
+            else if (position.x < -xScreenSize)
+                position.x = xScreenSize;
+            else if (position.y > OrthographicSize)
+                position.y = -OrthographicSize;
+            else if (position.y < -OrthographicSize)
+                position.y = OrthographicSize;
+            
+            
             translation.Value = position;
         });
     }
