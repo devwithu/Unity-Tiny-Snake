@@ -7,4 +7,5 @@ using Unity.Authoring.Core;
         [HideInInspector]
         public float3 Direction;
         public float3 LastPosition;
+        public bool GrowTail;
     }

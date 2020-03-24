@@ -1,9 +1,26 @@
 using Unity.Entities;
+using Unity.Tiny.Core;
+using Unity.Tiny.Scenes;
 
 public class InitTailSystem : ComponentSystem
 {
     protected override void OnUpdate()
     {
+        bool GrowTail = false;
+        Entities.ForEach( (Entity entity, ref SnakeHead snake) =>
+        {
+            if (!snake.GrowTail)
+            {
+                return;
+            }
+
+            GrowTail = true;
+            snake.GrowTail = false;
+        });
+        if (GrowTail)
+        {
+            SceneService.LoadSceneAsync(World.TinyEnvironment().GetConfigData<GameConfig>().SnakeTailSceneReference);
+        }
         Entities.ForEach( (Entity entity, ref SnakeTail tail) =>
         {
             var count = 0;

@@ -20,6 +20,9 @@
             "TickRate": 0.1,
             "SnakeTailSceneReference": {
                 "SceneGuid": "f04f31b22aa94985b009af2a46c038e7"
+            },
+            "FoodSceneReference": {
+                "SceneGuid": "124e021ad2b34c3da002143bb1d00363"
             }
         }, {
             "$type": "Unity.Tiny.Scenes.Scenes, Unity.Tiny.Scenes",
@@ -30,6 +33,10 @@
             }, {
                 "SceneReference": {
                     "SceneGuid": "f04f31b22aa94985b009af2a46c038e7"
+                }
+            }, {
+                "SceneReference": {
+                    "SceneGuid": "124e021ad2b34c3da002143bb1d00363"
                 }
             }]
         }, {
@@ -51,6 +58,10 @@
                 "StableTypeHash": 7812733310980956456
             }, {
                 "StableTypeHash": 679702626034275755
+            }, {
+                "StableTypeHash": 4292297787142216635
+            }, {
+                "StableTypeHash": 10358324386372324926
             }]
         }, {
             "$type": "Unity.Authoring.Core.ConfigurationTag, Unity.Authoring.Core"

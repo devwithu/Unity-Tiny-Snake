@@ -12,7 +12,7 @@ public class SnakeMovementSystem : ComponentSystem
 
     protected override void OnUpdate()
     {
-        bool shoudSpawn = false;
+
         Entities.ForEach((Entity Entity, ref SnakeHead snake, ref Translation translation) =>
         {
             var position = translation.Value;
@@ -34,12 +34,6 @@ public class SnakeMovementSystem : ComponentSystem
                 snake.Direction = new float3(1,0,0);
             }
 
-            if (inputSystem.GetKeyDown(KeyCode.Space))
-            {
-                shoudSpawn = true;
-               
-            }
-            
             var tinyEnv = World.TinyEnvironment();
             var gameConfig = tinyEnv.GetConfigData<GameConfig>();
             if (tinyEnv.frameTime - gameConfig.LastFrameTime < gameConfig.TickRate)
@@ -68,9 +62,6 @@ public class SnakeMovementSystem : ComponentSystem
             MoveTail();
         });
         
-        if(shoudSpawn)
-            SceneService.LoadSceneAsync(World.TinyEnvironment().GetConfigData<GameConfig>()
-                .SnakeTailSceneReference);
     }
 
     private void MoveTail()
