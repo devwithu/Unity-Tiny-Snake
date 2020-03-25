@@ -8,4 +8,5 @@ using Unity.Authoring.Core;
         public float3 Direction;
         public float3 LastPosition;
         public bool GrowTail;
+        public bool RemoveTail;
     }
